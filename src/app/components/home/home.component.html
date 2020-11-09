@@ -1,0 +1,33 @@
+<div class="card-columns">
+
+    <!-- <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i=index">
+        <img [src]="heroe.img" class="card-img-top img-fluid" [alt]="heroe.nombre">
+        <div class="card-body">
+            <h5 class="card-title">{{heroe.nombre}}</h5>
+            <p class="card-text">{{heroe.bio}}</p>
+            <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+            <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">
+                ver más....
+            </button>
+
+            
+
+        </div>
+    </div> -->
+
+
+    <div class="card" *ngFor="let juego of juegos">
+        <img [src]="juego.foto" class="card-img-top w-10 img-fluid" alt="juego">
+        <div class="card-body">
+            <h3 class="card-title">{{juego.nombre}}</h3>
+            <p class="card-text"><small class="text-muted">Q{{juego.precio}}</small></p>
+        </div>
+        <button class="btn btn-primary btn-block" (click)="getGame(juego.id)">
+            Ver..
+        </button>
+    </div>
+
+
+
+
+</div>

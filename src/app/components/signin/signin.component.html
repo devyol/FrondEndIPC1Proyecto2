@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                SignIn
+            </div>
+            <div class="card-body">
+                <form (submit)="signIn()">
+                    <div class="form-group">
+                        <input type="text" name="username" [(ngModel)]="user.username" class="form-control" placeholder="Usuario" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" [(ngModel)]="user.password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        SingIn
+                    </button>
+                    <a class="nav-link" routerLink="/recuperarContrasenia">Recuperar Contraseña</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

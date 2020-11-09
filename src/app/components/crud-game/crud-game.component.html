@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <button class="btn btn-primary" (click)="regresarGame()">
+            Regresar
+        </button>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header">
+                    Registro de Juego
+                </div>
+                <div class="card-body">
+                    <form (submit)="registrarGame()">
+                        <div class="form-group">
+                            <label>Nombre:</label>
+                            <input type="text" name="nombre" [(ngModel)]="juego.nombre" class="form-control" placeholder="" autofocus required>
+                        </div>
+                        <div class="form-group">
+                            <label>Año</label>
+                            <input type="number" name="anio" [(ngModel)]="juego.anio" class="form-control" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Precio</label>
+                            <input type="text" name="precio" [(ngModel)]="juego.precio" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Foto</label>
+                            <input type="text" name="precio" [(ngModel)]="juego.foto" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Banner</label>
+                            <input type="text" name="banner" [(ngModel)]="juego.banner" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Descripción</label>
+                            <textarea name="descripcion" [(ngModel)]="juego.descripcion" class="form-control" cols="30" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

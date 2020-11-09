@@ -1,0 +1,21 @@
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img [src]="juego.foto" class="card-img" [alt]="juego.nombre">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <strong><h2 class="card-title">{{juego.nombre}}</h2></strong>
+                <h6 class="card-text">Q {{juego.precio}}</h6>
+                <p class="card-text"><small class="text-muted">Año: {{juego.anio}}</small></p>
+                <p class="card-text">{{juego.descripcion}}</p>
+                <ng-container *ngIf="authService.loggerIn();else isNone">
+                    <button class="btn btn-danger">Agregar a mi Biblioteca</button>
+                </ng-container>
+                <ng-template #isNone>
+                </ng-template>
+
+            </div>
+        </div>
+    </div>
+</div>
